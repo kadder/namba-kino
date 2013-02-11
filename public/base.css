@@ -1,0 +1,191 @@
+body {
+    background: #eb5c93 url(/ima/logo.png) top center no-repeat;
+    font-family: "Segoe UI Semilight", sans;
+    color: #333;
+    font-size: 100%;
+    -webkit-background-size: 320px auto;
+    -moz-background-size: 320px auto;
+    -o-background-size: 320px auto;
+    background-size: 320px auto;
+}
+
+#theaters {
+    width: 320px;
+    background: red;
+    margin-top: 80px;
+    position: relative;
+}
+
+#theaters li {
+    width: 250px;
+    background: #fdfefe;
+    list-style: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+
+#theaters li .header {
+    height: 160px;
+    border-bottom: 1px solid #b3b3b3;
+    -moz-border-radius-topleft: 5px;
+    -webkit-border-top-left-radius: 5px;
+    border-top-left-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -webkit-border-top-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#theaters li .footer {
+    height: 10px;
+    overflow: hidden;
+    -moz-border-radius-bottomleft: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#theaters li.okt .header {
+    background: url(/ima/cinema-logo/okt.png) center center no-repeat;
+    height: 120px;
+}
+
+#theaters li.okt .footer {
+    background: #940000;
+}
+
+#theaters li.star .header {
+    background: url(/ima/cinema-logo/star.png) center center no-repeat;
+    height: 120px;
+}
+
+#theaters li.star .footer {
+    background: #000000;
+}
+
+#theaters li.manas .header {
+    background: url(/ima/cinema-logo/manas.png) center center no-repeat;
+    height: 120px;
+}
+
+#theaters li.manas .footer {
+    background: #37cdff;
+}
+
+#theaters li.cosmo .header {
+    background: url(/ima/cinema-logo/cosmo.png) center center no-repeat;
+    height: 120px;
+}
+
+#theaters li.cosmo .footer {
+    background: #666;
+}
+
+#theaters li.vefa .header {
+    background: url(/ima/cinema-logo/vefa.png) center center no-repeat;
+    height: 120px;
+}
+
+#theaters li.vefa .footer {
+    background: #b3d330;
+}
+
+#theaters li.rus .header {
+    background: url(/ima/cinema-logo/rus.png) center center no-repeat;
+    height: 120px;
+}
+
+#theaters li.rus .footer {
+    background: #154ab2;
+}
+
+#theaters li.ala .header {
+    background: url(/ima/cinema-logo/ala.png) center center no-repeat;
+    height: 120px;
+}
+
+#theaters li.ala .footer {
+    background: #3ba9f4;
+}
+
+#theaters li .phone {
+    padding: 15px 15px 15px 35px;
+    border-bottom: 1px solid #eaa7c5;
+    background: url(/ima/phone.png) no-repeat 15px center;
+}
+
+#theaters li .movie.hot {
+    background: #ffe8f5;
+}
+
+#theaters li .movie .trailer {
+    display: block;
+    width: 35px;
+    height: 23px;
+    background: url(/ima/sprite.png) -41px -33px no-repeat;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -12px;
+}
+
+#theaters li .movie .trailer:hover {
+    background-position: -41px 0;
+}
+#theaters li .movie.hot .trailer {
+    background-position: 0 -33px;
+}
+
+#theaters li .movie.hot .trailer:hover {
+    background-position: 0 0;
+}
+
+#theaters li .time {
+    position: relative;
+}
+
+#theaters li .movie {
+    background: #fcfdfd;
+    padding: 15px;
+    border-bottom: 1px solid #eaa7c5;
+}
+
+#theaters li .movie .title {
+    margin: 25px 0;
+    font-size: 130%;
+    font-family: "Segoe UI", sans;
+}
+
+#theaters .exact-time {
+    background: #0086ff;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    padding: 4px 6px;
+    color: #fff;
+}
+
+#theaters .price-value {
+    float: left;
+    color: #cc4186;
+}
+
+#theaters .hall {
+    float: right;
+}
+
+.arrow-right {
+    width: 0px;
+    height: 0px;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    border-left: 14px solid #0086ff;
+    float: left;
+}
+
+.clear {
+    clear: both;
+}

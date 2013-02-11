@@ -1,0 +1,59 @@
+
+<%
+  info = {
+    "Синематика - Ала-Тоо" => {:logo => "ala", :phone => "123"},
+    "Синематика - Вефа" => {:logo => "vefa"},
+    "Синематика - Космопарк" => {:logo => "cosmo"},
+    "Синематика - Октябрь" => {:logo => "okt"},
+    "Манас" => {:logo => "manas"},
+    "Мувистар" => {:logo => "star"},
+    "Россия" => {:logo => "rus"},
+  }
+%>
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Namba Kino</title>
+    <link rel="stylesheet" href="/normalize.css" />
+    <link rel="stylesheet" href="/font.css" />
+    <link rel="stylesheet" href="/base.css" />
+    <script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.wookmark.min.js"></script>
+    <script type="text/javascript" src="/js/base.js"></script>
+</head>
+<body>
+<div id="theaters">
+    <ul>              
+        <% @sched.each do |theater, movies|  %>
+        <li class="<%= info[theater.to_s][:logo] %>">
+            <div class="header" >
+                &nbsp;
+            </div>
+            <div class="phone">0312 45-65-32</div>
+            <% movies.each do |movie, time, price, hall|  %>
+            <div class="movie {% if forloop.first %} hot {% endif %}">
+                <div class="time">
+                    <div class="exact-time"><%= time %></div>
+                    <div class="arrow-right"></div>
+                    <!--<a href="#" class="trailer"></a>-->
+                    <div class="clear"></div>
+                </div>
+                <div class="title"><%= movie %></div>
+                <div class="price">
+                    <div class="price-value"><%= price %> сом</div>
+                    <div class="hall"><%= hall %></div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <% end %>
+            <div class="footer">&nbsp;</div>
+        </li>
+        <% end %>
+    </ul>
+</div>
+</body>
+</html>
