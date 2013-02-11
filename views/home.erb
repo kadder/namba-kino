@@ -29,26 +29,28 @@
 <div id="theaters">
     <ul>              
         <% @sched.each do |theater, movies|  %>
+        <% index = 0 %>
         <li class="<%= info[theater.to_s][:logo] %>">
             <div class="header" >
                 &nbsp;
             </div>
             <div class="phone">0312 45-65-32</div>
             <% movies.each do |movie, time, price, hall|  %>
-            <div class="movie {% if forloop.first %} hot {% endif %}">
+            <div class="movie <% if index == 0 %> hot <% end %>">
                 <div class="time">
-                    <div class="exact-time"><%= time %></div>
-                    <div class="arrow-right"></div>
-                    <!--<a href="#" class="trailer"></a>-->
-                    <div class="clear"></div>
+                  <div class="exact-time"><%= time %></div>
+                  <div class="arrow-right"></div>
+                  <!--<a href="#" class="trailer"></a>-->
+                  <div class="clear"></div>
                 </div>
                 <div class="title"><%= movie %></div>
                 <div class="price">
-                    <div class="price-value"><%= price %> сом</div>
-                    <div class="hall"><%= hall %></div>
-                    <div class="clear"></div>
+                  <div class="price-value"><%= price %> сом</div>
+                  <div class="hall"><%= hall %></div>
+                  <div class="clear"></div>
                 </div>
             </div>
+            <% index += 1 %>
             <% end %>
             <div class="footer">&nbsp;</div>
         </li>
