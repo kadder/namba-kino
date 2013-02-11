@@ -22,6 +22,7 @@ get '/' do
         movieTime >= '#{time}' AND
         theaterName='#{t}'
       ORDER BY movieTime ASC
+      LIMIT 0, 3
       ")
     @sched[t] = movies
   end
