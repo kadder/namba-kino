@@ -1,13 +1,13 @@
 
 <%
   info = {
-    "Синематика - Ала-Тоо" => {:logo => "ala", :phone => "123"},
-    "Синематика - Вефа" => {:logo => "vefa"},
-    "Синематика - Космопарк" => {:logo => "cosmo"},
-    "Синематика - Октябрь" => {:logo => "okt"},
-    "Манас" => {:logo => "manas"},
-    "Мувистар" => {:logo => "star"},
-    "Россия" => {:logo => "rus"},
+    "Синематика - Ала-Тоо" => {:logo => "ala", :phone => "0 (312) 66 19 57"},
+    "Синематика - Вефа" => {:logo => "vefa", :phone => "0 (312) 59 66 88 "},
+    "Синематика - Космопарк" => {:logo => "cosmo", :phone => "0 (312) 29 94 94"},
+    "Синематика - Октябрь" => {:logo => "okt", :phone => "0 (312) 39 20 91"},
+    "Манас" => {:logo => "manas", :phone => "0 (312) 54-58-61"},
+    "Мувистар" => {:logo => "star", :phone => "0 (312) 46-04-44"},
+    "Россия" => {:logo => "rus", :phone => "0 (312) 66-09-60"},
   }
 %>
 
@@ -34,7 +34,7 @@
             <div class="header" >
                 &nbsp;
             </div>
-            <div class="phone">0312 45-65-32</div>
+            <div class="phone"><%= info[theater.to_s][:phone] %></div>
             <% movies.each do |movie, time, price, hall|  %>
             <div class="movie <% if index == 0 %> hot <% end %>">
                 <div class="time">
