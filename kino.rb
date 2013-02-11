@@ -3,8 +3,9 @@ require "bundler/setup"
 require "sinatra"
 require "sqlite3"
 
-#set :environment, :production
-#set :server, %w[thin]
+set :environment, :production
+set :server, %w[thin]
+set :port, 9494
 
 get '/' do
   @sched = {}
