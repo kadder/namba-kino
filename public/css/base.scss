@@ -10,6 +10,7 @@ $title-font-size: 24px;
   text-align: center;
   padding:$main-padding;
   span {
+    white-space: nowrap;
     background-color: $green;
     padding: 3px 13px 3px 13px;
     color:white;
