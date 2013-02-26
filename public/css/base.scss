@@ -1,0 +1,32 @@
+$green: #10b0c6;
+$main-padding: 50px;
+$title-font-size: 24px;
+
+#logo {
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  padding:$main-padding;
+  span {
+    background-color: $green;
+    padding: 3px 13px 3px 13px;
+    color:white;
+    font-size: $title-font-size;
+  }
+}
+
+.movie {
+  text-align: center;
+  padding-bottom: $main-padding;
+  .time {
+    background-color: $green;
+    color:white;
+    padding: 3px;
+  }
+  .movie-title {
+    font-size: $title-font-size;
+    padding-bottom: 10px;
+  }
+}

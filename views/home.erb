@@ -1,61 +1,45 @@
-
 <%
   info = {
-    "Синематика - Ала-Тоо" => {:logo => "ala", :phone => "0 (312) 66 19 57"},
-    "Синематика - Вефа" => {:logo => "vefa", :phone => "0 (312) 59 66 88 "},
-    "Синематика - Космопарк" => {:logo => "cosmo", :phone => "0 (312) 29 94 94"},
-    "Синематика - Октябрь" => {:logo => "okt", :phone => "0 (312) 39 20 91"},
-    "Манас" => {:logo => "manas", :phone => "0 (312) 54-58-61"},
-    "Мувистар" => {:logo => "star", :phone => "0 (312) 46-04-44"},
-    "Россия" => {:logo => "rus", :phone => "0 (312) 66-09-60"},
+    "Синематика - Ала-Тоо" => {:url => "http://cinematica.kg"},
+    "Синематика - Вефа" => {:url => "http://cinematica.kg"},
+    "Синематика - Космопарк" => {:url => "http://cinematica.kg"},
+    "Синематика - Октябрь" => {:url => "http://cinematica.kg"},
+    "Манас" => {:url => "http://manascinema.kg"},
+    "Мувистар" => {:url => "http://moviestar.kg"},
+    "Россия" => {:url => "http://cinema.kg"},
   }
 %>
 
-<!DOCTYPE HTML>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <title>Namba Kino</title>
-    <link rel="stylesheet" href="/normalize.css" />
-    <link rel="stylesheet" href="/font.css" />
-    <link rel="stylesheet" href="/base.css" />
-    <script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="/js/jquery.wookmark.min.js"></script>
-    <script type="text/javascript" src="/js/base.js"></script>
+  <title>Намба Кино</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="/css/base.css" rel="stylesheet" media="screen">
 </head>
 <body>
-<div id="theaters">
-    <ul>              
-        <% @sched.each do |theater, movies|  %>
-        <% index = 0 %>
-        <li class="<%= info[theater.to_s][:logo] %>">
-            <div class="header" >
-                &nbsp;
-            </div>
-            <div class="phone"><%= info[theater.to_s][:phone] %></div>
-            <% movies.each do |movie, time, price, hall|  %>
-            <div class="movie <% if index == 0 %> hot <% end %>">
-                <div class="time">
-                  <div class="exact-time"><%= time %></div>
-                  <div class="arrow-right"></div>
-                  <!--<a href="#" class="trailer"></a>-->
-                  <div class="clear"></div>
-                </div>
-                <div class="title"><%= movie %></div>
-                <div class="price">
-                  <div class="price-value"><%= price %> сом</div>
-                  <div class="hall"><%= hall %></div>
-                  <div class="clear"></div>
-                </div>
-            </div>
-            <% index += 1 %>
-            <% end %>
-            <div class="footer">&nbsp;</div>
-        </li>
-        <% end %>
-    </ul>
+
+<div class="container">
+  <div id="logo"><img src="/ima/logo.png"></div>
+  <div class="title"><span>Ближайшие киносеансы на сегодня</span></div>
+  <div class="movies">
+
+    <% @movies.each do |place, movie, time, price, hall|  %>
+    <div class="movie">
+      <div class="movie-title"><%= movie %></div>
+      <div class="movie-info">
+        <span class="place"><a href="<%= info[place][:url] %>"><%= place %></a></span>
+        <span class="time"><%= time %></span>
+        <span><%= hall %></span>, цена <%= price %> сом
+      </div>
+    </div>
+    <% end %>
+  </div>
 </div>
+
+<script src="/js/jquery.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

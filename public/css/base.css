@@ -1,0 +1,22 @@
+#logo {
+  text-align: center; }
+
+.title {
+  text-align: center;
+  padding: 50px; }
+  .title span {
+    background-color: #10b0c6;
+    padding: 3px 13px 3px 13px;
+    color: white;
+    font-size: 24px; }
+
+.movie {
+  text-align: center;
+  padding-bottom: 50px; }
+  .movie .time {
+    background-color: #10b0c6;
+    color: white;
+    padding: 3px; }
+  .movie .movie-title {
+    font-size: 24px;
+    padding-bottom: 10px; }
