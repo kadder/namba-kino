@@ -3,7 +3,8 @@ require "bundler/setup"
 require "sinatra"
 require "sqlite3"
 
-set :server, %w[webrick]
+set :environment, :production
+set :server, %w[thin]
 set :port, 9494
 
 get '/' do
