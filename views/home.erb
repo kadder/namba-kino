@@ -29,11 +29,11 @@
 
     <% @movies.each do |place, movie, time, price, hall|  %>
     <div class="movie">
-      <div class="movie-title"><%= movie %></div>
+      <div class="movie-title"><%= movie unless movie.nil? %></div>
       <div class="movie-info">
-        <span class="place"><a href="<%= info[place][:url] %>"><%= place %></a></span>
+        <span class="place"><a href="<%= info[place][:url] unless info[place].nil? %>"><%= place unless place.nil?%></a></span>
         <span class="time"><%= time %></span>
-        <div><%= hall %>, цена <%= price %> сом</div>
+        <div><%= hall unless hall.nil? %>, цена <%= price unless price.nil? %> сом</div>
       </div>
     </div>
     <% end %>
