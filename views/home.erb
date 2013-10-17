@@ -13,18 +13,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Намба Кино</title>
+  <title>Афиша кинотеатров Бишкека</title>
+  <meta name="description" content="Узнай что идет в кинотеатрах Бишкека. Установи мобильные приложения афиши Бишкека для IPHONE и ANDROID" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Bootstrap -->
   <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
   <link href="/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
-  <link href="/css/base.css" rel="stylesheet" media="screen">
+  <link href="/css/base.css?1" rel="stylesheet" media="screen">
 </head>
 <body>
 
 <div class="container">
   <div id="logo"><img src="/ima/logo.png"></div>
-  <div class="title"><span>Ближайшие киносеансы на сегодня</span></div>
+  <div id="apps">
+    <a href="https://play.google.com/store/apps/details?id=kg.namba.NambaKino"><img border=0 src="/ima/play.png"></a>
+    <a href="https://itunes.apple.com/ru/app/id712908925"><img border=0 src="/ima/store.png"></a>
+  </div>
+  <div class="title"><span>Ближайшие киносеансы на сегодня в Бишкеке</span></div>
   <div class="movies">
 
     <% @movies.each do |place, movie, time, price, hall|  %>
