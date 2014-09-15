@@ -40,7 +40,7 @@
         <span class="place"><a rel="nofollow" href="<%= info[place][:url] unless info[place].nil? %>"><%= place unless place.nil?%></a></span>
         <span class="time"><%= time %></span>
         <div><%= hall unless hall.nil? %>, цена <%= price unless price.nil? %> сом</div>
-        <div><iframe width="560" height="315" src="http://www.youtube.com/embed?listType=search&amp;list=<%= movie %> трейлер" frameborder="0" allowfullscreen></iframe></div>
+        <div><iframe width="560" height="315" src="http://www.youtube.com/embed?listType=search&amp;showinfo=0&amp;list=<%= movie %> трейлер" frameborder="0" allowfullscreen></iframe></div>
       </div>
     </div>
     <% end %>
