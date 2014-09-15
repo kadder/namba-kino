@@ -52,7 +52,7 @@
 <script src="/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 <% @movies.each do |place, movie, time, price, hall|  %>
-ytEmbed.init({'block':'ytThumbs<%= place %>','q':'<%= movie %> трейлер','type':'search','results':1,'order':'most_relevance','player':'embed','layout':'full'});
+ytEmbed.init({'block':'ytThumbs<%= place %>','q':'<%= movie %> трейлер','type':'search','results':1,'order':'most_relevance','player':'embed','layout':'thumbnails'});
 <% end %>
 </script>
   <script>
