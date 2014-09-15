@@ -40,7 +40,7 @@
         <span class="place"><a rel="nofollow" href="<%= info[place][:url] unless info[place].nil? %>"><%= place unless place.nil?%></a></span>
         <span class="time"><%= time %></span>
         <div><%= hall unless hall.nil? %>, цена <%= price unless price.nil? %> сом</div>
-        <div id="ytThumbs<%= Digest::MD5.hexdigest(place+movie+time) %>"></div>
+        <div><iframe width="560" height="315" src="http://www.youtube.com/embed?listType=search&amp;list=<%= movie %> трейлер" frameborder="0" allowfullscreen></iframe></div>
       </div>
     </div>
     <% end %>
@@ -48,13 +48,7 @@
 </div>
 
 <script src="/js/jquery.js"></script>
-<script src="http://www.yvoschaap.com/ytpage/ytembed.js" type="text/javascript"></script>
 <script src="/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-<% @movies.each do |place, movie, time, price, hall|  %>
-ytEmbed.init({'block':'ytThumbs<%= Digest::MD5.hexdigest(place+movie+time) %>','q':'<%= movie %> трейлер','type':'search','results':1,'order':'most_relevance','player':'embed','layout':'thumbnails'});
-<% end %>
-</script>
   <script>
     function gaSSDSLoad (acct, domain) {
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."),
