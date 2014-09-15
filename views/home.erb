@@ -40,7 +40,7 @@
         <span class="place"><a rel="nofollow" href="<%= info[place][:url] unless info[place].nil? %>"><%= place unless place.nil?%></a></span>
         <span class="time"><%= time %></span>
         <div><%= hall unless hall.nil? %>, цена <%= price unless price.nil? %> сом</div>
-        <div id="ytThumbs<%= place %>"></div>
+        <div id="ytThumbs<%= Digest::MD5.hexdigest(place+movie+time) %>"></div>
       </div>
     </div>
     <% end %>
@@ -52,7 +52,7 @@
 <script src="/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 <% @movies.each do |place, movie, time, price, hall|  %>
-ytEmbed.init({'block':'ytThumbs<%= place %>','q':'<%= movie %> трейлер','type':'search','results':1,'order':'most_relevance','player':'embed','layout':'thumbnails'});
+ytEmbed.init({'block':'ytThumbs<%= Digest::MD5.hexdigest(place+movie+time) %>','q':'<%= movie %> трейлер','type':'search','results':1,'order':'most_relevance','player':'embed','layout':'thumbnails'});
 <% end %>
 </script>
   <script>
